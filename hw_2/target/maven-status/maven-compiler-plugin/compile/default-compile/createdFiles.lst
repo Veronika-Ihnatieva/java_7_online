@@ -1,7 +1,0 @@
-entity\Wine.class
-service\WineService.class
-Start.class
-dao\WineDao.class
-controller\WineController.class
-entity\BaseEntity.class
-util\AppUtil.class
