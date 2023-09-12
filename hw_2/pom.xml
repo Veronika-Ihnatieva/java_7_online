@@ -1,0 +1,51 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>java_7_online</groupId>
+        <artifactId>java_7_online</artifactId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <groupId>org.example</groupId>
+    <artifactId>hw_2</artifactId>
+    <name>Archetype - hw_2</name>
+    <url>http://maven.apache.org</url>
+
+    <properties>
+        <maven-shade-plugins.version>3.4.1</maven-shade-plugins.version>
+
+    </properties>
+
+    <build>
+        <finalName>hw_2</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-shade-plugin</artifactId>
+                <version>${maven-shade-plugins.version}</version>
+                <executions>
+                    <execution>
+                        <phase>
+                            package
+                        </phase>
+                        <goals>
+                            <goal>
+                                shade
+                            </goal>
+                        </goals>
+                        <configuration>
+                            <transformers>
+                                <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
+                                    <mainClass>Start</mainClass>
+                                </transformer>
+                            </transformers>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+</project>
+
