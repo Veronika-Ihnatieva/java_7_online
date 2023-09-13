@@ -4,18 +4,11 @@ import entity.Wine;
 import java.util.UUID;
 
 public class WineDao {
-
-    //private Wine[] wines = new Wine[10];
-
-
-    private Wine[] wines = new Wine[10];
+    private Wine[] wines = new Wine[2];
     public void arrayLarge() {
         Wine[] winesLarge = new Wine[wines.length*2];
         System.arraycopy (wines, 0, winesLarge, 0, wines.length);
         wines = winesLarge;
-    }
-
-    public WineDao() {
     }
 
     public void create(Wine wine) {
@@ -28,16 +21,14 @@ public class WineDao {
                 break;
             }
         }
-
     }
 
     public void update(Wine wine) {
         if (wine.getYear() <= 0) {
-            System.out.println("incorrect year");
+            System.out.println("Incorrect year");
         } else {
             System.out.println("Year was update");
         }
-
     }
 
     public void delete(String id) {
@@ -51,7 +42,6 @@ public class WineDao {
                 ++i;
             }
         }
-
     }
 
     public Wine findOne(String id) {
@@ -61,7 +51,6 @@ public class WineDao {
                 return wine;
             }
         }
-
         return null;
     }
 
