@@ -16,8 +16,10 @@
         <module name="untitled" />
         <module name="hw_3" />
         <module name="hw_2" />
-        <module name="hw_5" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="hw_5" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

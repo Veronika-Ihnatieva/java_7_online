@@ -4,12 +4,22 @@ import entity.Wine;
 import java.util.UUID;
 
 public class WineDao {
+
+    //private Wine[] wines = new Wine[10];
+
+
     private Wine[] wines = new Wine[10];
+    public void arrayLarge() {
+        Wine[] winesLarge = new Wine[wines.length*2];
+        System.arraycopy (wines, 0, winesLarge, 0, wines.length);
+        wines = winesLarge;
+    }
 
     public WineDao() {
     }
 
     public void create(Wine wine) {
+        arrayLarge();
         for(int i = 0; i < this.wines.length; ++i) {
             if (this.wines[i] == null) {
                 String id = UUID.randomUUID().toString();
