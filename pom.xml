@@ -10,11 +10,9 @@
     <packaging>pom</packaging>
     <modules>
         <module>hw_1</module>
+        <module>hw_2</module>
         <module>hw_3</module>
-        <module>hw_2</module>
-        <module>hw_4</module>
-        <module>hw_2</module>
-        <module>hw_5</module>
+
     </modules>
 
     <properties>
