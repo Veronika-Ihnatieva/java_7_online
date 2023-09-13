@@ -10,9 +10,6 @@ import service.WineService;
 public class WineController {
     private WineService wineService = new WineService();
 
-    public WineController() {
-    }
-
     public void start() throws IOException {
         BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Welcome to The Wine Catalog!");
@@ -23,7 +20,6 @@ public class WineController {
         while((select = bufferedReader.readLine()) != null) {
             this.crud(bufferedReader, select);
         }
-
     }
 
     private void menu() {
@@ -56,7 +52,6 @@ public class WineController {
             case "6":
                 System.exit(0);
         }
-
         this.menu();
     }
 

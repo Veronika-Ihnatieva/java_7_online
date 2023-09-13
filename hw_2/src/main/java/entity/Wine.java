@@ -5,9 +5,6 @@ public class Wine extends BaseEntity {
     private String grapes;
     private int year;
 
-    public Wine() {
-    }
-
     public String getBrand() {
         return this.brand;
     }

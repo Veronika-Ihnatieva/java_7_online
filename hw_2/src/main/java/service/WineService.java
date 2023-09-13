@@ -6,16 +6,12 @@ import entity.Wine;
 public class WineService {
     private WineDao wineDao = new WineDao();
 
-    public WineService() {
-    }
-
     public void create(Wine wine) {
         if (wine.getYear() <= 0) {
             System.out.println("incorrect year");
         } else {
             this.wineDao.create(wine);
         }
-
     }
 
     public void update(Wine wine) {
