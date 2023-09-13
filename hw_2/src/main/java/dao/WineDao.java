@@ -4,7 +4,7 @@ import entity.Wine;
 import java.util.UUID;
 
 public class WineDao {
-    private Wine[] wines = new Wine[2];
+    private Wine[] wines = new Wine[10];
     public void arrayLarge() {
         Wine[] winesLarge = new Wine[wines.length*2];
         System.arraycopy (wines, 0, winesLarge, 0, wines.length);

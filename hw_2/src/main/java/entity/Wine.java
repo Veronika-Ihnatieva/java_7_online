@@ -6,7 +6,7 @@ public class Wine extends BaseEntity {
     private int year;
 
     public String getBrand() {
-        return this.brand;
+        return brand;
     }
 
     public void setBrand(String brand) {
@@ -14,7 +14,7 @@ public class Wine extends BaseEntity {
     }
 
     public String getGrapes() {
-        return this.grapes;
+        return grapes;
     }
 
     public void setGrapes(String grapes) {
@@ -26,6 +26,6 @@ public class Wine extends BaseEntity {
     }
 
     public int getYear() {
-        return this.year;
+        return year;
     }
 }

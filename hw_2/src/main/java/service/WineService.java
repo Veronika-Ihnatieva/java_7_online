@@ -10,23 +10,15 @@ public class WineService {
         if (wine.getYear() <= 0) {
             System.out.println("incorrect year");
         } else {
-            this.wineDao.create(wine);
+            wineDao.create(wine);
         }
     }
 
-    public void update(Wine wine) {
-        this.wineDao.update(wine);
-    }
+    public void update(Wine wine) { wineDao.update(wine);}
 
-    public void delete(String id) {
-        this.wineDao.delete(id);
-    }
+    public void delete(String id) { wineDao.delete(id); }
 
-    public Wine findById(String id) {
-        return this.wineDao.findOne(id);
-    }
+    public Wine findById(String id) { return wineDao.findOne(id); }
 
-    public Wine[] findAll() {
-        return this.wineDao.findAll();
-    }
+    public Wine[] findAll() { return wineDao.findAll(); }
 }
