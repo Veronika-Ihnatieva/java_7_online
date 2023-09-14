@@ -1,10 +1,10 @@
 package dao;
 
 import entity.Wine;
-import java.util.UUID;
+import util.AppUtil;
 
 public class WineDao {
-    private Wine[] wines = new Wine[10];
+    private Wine[] wines = new Wine[2];
     public void arrayLarge() {
         Wine[] winesLarge = new Wine[wines.length*2];
         System.arraycopy (wines, 0, winesLarge, 0, wines.length);
@@ -13,11 +13,11 @@ public class WineDao {
 
     public void create(Wine wine) {
         arrayLarge();
-        for(int i = 0; i < this.wines.length; ++i) {
-            if (this.wines[i] == null) {
-                String id = UUID.randomUUID().toString();
+        for(int i = 0; i < wines.length; ++i) {
+            if (wines[i] == null) {
+                String id = AppUtil.getUUID();
                 wine.setId(id);
-                this.wines[i] = wine;
+                wines[i] = wine;
                 break;
             }
         }
@@ -32,10 +32,10 @@ public class WineDao {
     }
 
     public void delete(String id) {
-        for(int i = 0; i < this.wines.length; ++i) {
+        for(int i = 0; i < wines.length; ++i) {
             try {
-                if (this.wines[i].getId().equals(id)) {
-                    this.wines[i] = null;
+                if (wines[i].getId().equals(id)) {
+                    wines[i] = null;
                     System.out.println("Wine was delete");
                 }
             } catch (Exception var4) {
@@ -45,8 +45,8 @@ public class WineDao {
     }
 
     public Wine findOne(String id) {
-        for(int i = 0; i < this.wines.length; ++i) {
-            Wine wine = this.wines[i];
+        for(int i = 0; i < wines.length; ++i) {
+            Wine wine = wines[i];
             if (wine != null && wine.getId().equals(id)) {
                 return wine;
             }
@@ -55,6 +55,6 @@ public class WineDao {
     }
 
     public Wine[] findAll() {
-        return this.wines;
+        return wines;
     }
 }

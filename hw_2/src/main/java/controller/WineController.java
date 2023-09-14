@@ -88,7 +88,7 @@ public class WineController {
                     yearString = bufferedReader.readLine();
                     int year = Integer.parseInt(yearString);
                     wine.setYear(year);
-                    this.wineService.update(wine);
+                    wineService.update(wine);
                 }
                 case "4" -> {
                     System.exit(0);
